@@ -6,235 +6,226 @@
 <title>PadhManzil</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Segoe UI,sans-serif;
 }
 
 body{
-background:#f8fbff;
-color:#222;
+background:#f8fbfd;
+overflow-x:hidden;
 }
 
-/* Splash */
+/* Splash Screen */
+
 #splash{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100vh;
-background:linear-gradient(135deg,#ffffff,#e0f2fe,#d1fae5);
+background:#ffffff;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 z-index:9999;
-animation:fadeout 3s forwards;
+animation:hideSplash 3s forwards;
 }
 
 #splash h1{
-font-size:70px;
-color:#2563eb;
-animation:zoom 1.5s ease;
+font-size:52px;
+font-weight:700;
+color:#0f172a;
+animation:zoomIn 1.2s ease;
+}
+
+#splash span{
+color:#14b8a6;
 }
 
 #splash p{
 margin-top:15px;
-font-size:20px;
+font-size:18px;
 text-align:center;
-padding:0 20px;
+max-width:300px;
+color:#475569;
 }
 
-@keyframes zoom{
-0%{transform:scale(.5);opacity:0;}
-100%{transform:scale(1);opacity:1;}
+@keyframes zoomIn{
+0%{
+opacity:0;
+transform:scale(.6);
+}
+100%{
+opacity:1;
+transform:scale(1);
+}
 }
 
-@keyframes fadeout{
-0%,80%{opacity:1;}
-100%{opacity:0;visibility:hidden;}
+@keyframes hideSplash{
+0%,80%{
+opacity:1;
+}
+100%{
+opacity:0;
+visibility:hidden;
+}
 }
 
 /* Navbar */
+
 nav{
-background:white;
-padding:18px 25px;
+position:sticky;
+top:0;
+background:#fff;
+padding:16px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 12px rgba(0,0,0,.08);
-position:sticky;
-top:0;
+box-shadow:0 4px 15px rgba(0,0,0,.05);
+z-index:100;
 }
 
 .logo{
-font-size:28px;
-font-weight:bold;
-color:#2563eb;
+font-size:24px;
+font-weight:700;
+color:#0f172a;
+}
+
+.logo span{
+color:#14b8a6;
+}
+
+.menu{
+display:flex;
+gap:15px;
+font-size:14px;
+}
+
+.menu a{
+text-decoration:none;
+color:#334155;
 }
 
 /* Hero */
+
 .hero{
-padding:80px 20px;
-text-align:center;
+padding:60px 20px;
 }
 
 .hero h1{
 font-size:52px;
-margin-bottom:15px;
+line-height:1.1;
+color:#0f172a;
 }
 
-.hero span{
-color:#2563eb;
+.hero h1 span{
+color:#14b8a6;
 }
 
 .hero p{
-max-width:700px;
-margin:auto;
+margin-top:20px;
 font-size:18px;
 line-height:1.7;
+color:#475569;
 }
 
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 28px;
-background:#2563eb;
+.btns{
+margin-top:30px;
+display:flex;
+gap:15px;
+}
+
+.primary{
+background:#14b8a6;
 color:white;
-text-decoration:none;
+padding:14px 24px;
 border-radius:12px;
+text-decoration:none;
+font-weight:600;
 }
 
-/* Feature Cards */
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-padding:20px;
-max-width:1200px;
-margin:auto;
-}
-
-.card{
+.secondary{
 background:white;
+color:#0f172a;
+padding:14px 24px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+border:1px solid #e2e8f0;
+}
+
+.hero-card{
+margin-top:40px;
+background:white;
+border-radius:24px;
 padding:25px;
-border-radius:18px;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
-transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+text-align:center;
 }
 
-.card:hover{
-transform:translateY(-6px);
-}
-
-.card h3{
+.hero-card h3{
+font-size:24px;
 margin-bottom:10px;
 }
 
-/* Leaderboard */
-.leaderboard{
-max-width:1000px;
-margin:60px auto;
-padding:20px;
+.hero-card p{
+font-size:15px;
 }
 
-.leaderboard h2{
-text-align:center;
-margin-bottom:25px;
-color:#2563eb;
-}
-
-.rank-box{
-background:white;
-padding:20px;
-border-radius:15px;
-margin-bottom:15px;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
-display:flex;
-justify-content:space-between;
-}
-
-footer{
-margin-top:50px;
-padding:25px;
-text-align:center;
-background:white;
-}
 </style>
 </head>
 
 <body>
 
 <div id="splash">
-<h1>📚 PadhManzil</h1>
-<p>Har sapna, ek mehnat se shuru hota hai.</p>
+<h1>Padh<span>Manzil</span></h1>
+<p>
+Har sapna, ek mehnat se shuru hota hai.<br>
+Chalo, aaj se shuru karte hain.
+</p>
 </div>
 
 <nav>
-<div class="logo">📚 PadhManzil</div>
+<div class="logo">Padh<span>Manzil</span></div>
+
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">Quiz</a>
+<a href="#">Revision</a>
+</div>
 </nav>
 
 <section class="hero">
-<h1>Padhai se <span>Manzil</span> Tak</h1>
+
+<h1>
+Padhai se<br>
+<span>Manzil Tak</span>
+</h1>
 
 <p>
-Quiz khelo, points kamao, rank badhao aur
-apni padhai ko game ki tarah exciting banao.
+Class 11 ke students ke liye quizzes,
+formula sheets aur revision resources.
 </p>
 
-<a href="#" class="btn">Start Learning 🚀</a>
-</section>
-
-<section class="cards">
-
-<div class="card">
-<h3>📝 Quizzes</h3>
-<p>Chapter wise quizzes aur instant score.</p>
+<div class="btns">
+<a class="primary" href="#">Start Learning 🚀</a>
+<a class="secondary" href="#">Explore 📖</a>
 </div>
 
-<div class="card">
-<h3>📄 Formula Sheets</h3>
-<p>Important formulas ek hi jagah.</p>
-</div>
-
-<div class="card">
-<h3>🎯 Revision Zone</h3>
-<p>Exam ke pehle quick revision.</p>
-</div>
-
-<div class="card">
-<h3>🏆 Leaderboard</h3>
-<p>Points collect karke rank badhao.</p>
+<div class="hero-card">
+<h3>📚 Everything You Need</h3>
+<p>
+Quizzes, Formula Sheets aur Revision Resources
+ek hi jagah.
+</p>
 </div>
 
 </section>
-
-<section class="leaderboard">
-
-<h2>🏆 Top Learners</h2>
-
-<div class="rank-box">
-<span>🥇 Rahul</span>
-<span>2450 Points</span>
-</div>
-
-<div class="rank-box">
-<span>🥈 Priya</span>
-<span>2210 Points</span>
-</div>
-
-<div class="rank-box">
-<span>🥉 Aman</span>
-<span>1980 Points</span>
-</div>
-
-</section>
-
-<footer>
-© 2026 PadhManzil • Padhai Se Manzil Tak
-</footer>
 
 </body>
-  </html>
+</html>
