@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PadhManzil Quiz</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>Quiz Page Working 🎉</h1>
+<nav>
+<div class="logo">📝 PadhManzil Quiz</div>
+</nav>
+
+<section class="hero">
+
+<div class="tag">🎯 Quick Quiz</div>
+
+<h1>Test Your<br><span>Knowledge</span></h1>
+
+<p>Quiz complete karo aur apna score dekho.</p>
+
+</section>
+
+<div class="hero-card">
+
+<h3>Question 1</h3>
+<p>SI Unit of Force kya hai?</p>
+
+<label><input type="radio" name="q1" value="0"> Joule</label><br><br>
+<label><input type="radio" name="q1" value="1"> Newton</label><br><br>
+<label><input type="radio" name="q1" value="0"> Watt</label><br><br>
+
+<hr><br>
+
+<h3>Question 2</h3>
+<p>H₂O ka common naam kya hai?</p>
+
+<label><input type="radio" name="q2" value="1"> Water</label><br><br>
+<label><input type="radio" name="q2" value="0"> Oxygen</label><br><br>
+<label><input type="radio" name="q2" value="0"> Hydrogen</label><br><br>
+
+<hr><br>
+
+<h3>Question 3</h3>
+<p>Cell ko kisne discover kiya?</p>
+
+<label><input type="radio" name="q3" value="1"> Robert Hooke</label><br><br>
+<label><input type="radio" name="q3" value="0"> Newton</label><br><br>
+<label><input type="radio" name="q3" value="0"> Einstein</label><br><br>
+
+<br>
+
+<button onclick="checkQuiz()" class="btn">
+Submit Quiz 🚀
+</button>
+
+<h2 id="result"></h2>
+
+</div>
+
+<script>
+function checkQuiz() {
+let score = 0;
+
+score += Number(document.querySelector('input[name="q1"]:checked')?.value || 0);
+score += Number(document.querySelector('input[name="q2"]:checked')?.value || 0);
+score += Number(document.querySelector('input[name="q3"]:checked')?.value || 0);
+
+document.getElementById("result").innerHTML =
+"🎉 Your Score: " + score + "/3";
+}
+</script>
 
 </body>
-</html>
+  </html>
