@@ -4,228 +4,98 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PadhManzil</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
-}
-
-body{
-background:#f8fbfd;
-overflow-x:hidden;
-}
-
-/* Splash Screen */
-
-#splash{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100vh;
-background:#ffffff;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-z-index:9999;
-animation:hideSplash 3s forwards;
-}
-
-#splash h1{
-font-size:52px;
-font-weight:700;
-color:#0f172a;
-animation:zoomIn 1.2s ease;
-}
-
-#splash span{
-color:#14b8a6;
-}
-
-#splash p{
-margin-top:15px;
-font-size:18px;
-text-align:center;
-max-width:300px;
-color:#475569;
-}
-
-@keyframes zoomIn{
-0%{
-opacity:0;
-transform:scale(.6);
-}
-100%{
-opacity:1;
-transform:scale(1);
-}
-}
-
-@keyframes hideSplash{
-0%,80%{
-opacity:1;
-}
-100%{
-opacity:0;
-visibility:hidden;
-}
-}
-
-/* Navbar */
-
-nav{
-position:sticky;
-top:0;
-background:#fff;
-padding:16px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 4px 15px rgba(0,0,0,.05);
-z-index:100;
-}
-
-.logo{
-font-size:24px;
-font-weight:700;
-color:#0f172a;
-}
-
-.logo span{
-color:#14b8a6;
-}
-
-.menu{
-display:flex;
-gap:15px;
-font-size:14px;
-}
-
-.menu a{
-text-decoration:none;
-color:#334155;
-}
-
-/* Hero */
-
-.hero{
-padding:60px 20px;
-}
-
-.hero h1{
-font-size:52px;
-line-height:1.1;
-color:#0f172a;
-}
-
-.hero h1 span{
-color:#14b8a6;
-}
-
-.hero p{
-margin-top:20px;
-font-size:18px;
-line-height:1.7;
-color:#475569;
-}
-
-.btns{
-margin-top:30px;
-display:flex;
-gap:15px;
-}
-
-.primary{
-background:#14b8a6;
-color:white;
-padding:14px 24px;
-border-radius:12px;
-text-decoration:none;
-font-weight:600;
-}
-
-.secondary{
-background:white;
-color:#0f172a;
-padding:14px 24px;
-border-radius:12px;
-text-decoration:none;
-font-weight:600;
-border:1px solid #e2e8f0;
-}
-
-.hero-card{
-margin-top:40px;
-background:white;
-border-radius:24px;
-padding:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.06);
-text-align:center;
-}
-
-.hero-card h3{
-font-size:24px;
-margin-bottom:10px;
-}
-
-.hero-card p{
-font-size:15px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div id="splash">
-<h1>Padh<span>Manzil</span></h1>
-<p>
-Har sapna, ek mehnat se shuru hota hai.<br>
-Chalo, aaj se shuru karte hain.
-</p>
+    <h1>📚 PadhManzil</h1>
+    <p>Har sapna, ek mehnat se shuru hota hai.</p>
 </div>
 
 <nav>
-<div class="logo">Padh<span>Manzil</span></div>
-
-<div class="menu">
-<a href="#">Home</a>
-<a href="#">Quiz</a>
-<a href="#">Revision</a>
-</div>
+    <div class="logo">📚 PadhManzil</div>
 </nav>
 
 <section class="hero">
 
-<h1>
-Padhai se<br>
-<span>Manzil Tak</span>
-</h1>
+    <div class="tag">
+        ✨ Smart Learning Platform
+    </div>
 
-<p>
-Class 11 ke students ke liye quizzes,
-formula sheets aur revision resources.
-</p>
+    <h1>
+        Padhai Se<br>
+        <span>Manzil Tak</span>
+    </h1>
 
-<div class="btns">
-<a class="primary" href="#">Start Learning 🚀</a>
-<a class="secondary" href="#">Explore 📖</a>
-</div>
+    <p>
+        Quizzes, Formula Sheets aur Revision Resources
+        ke saath smart study karo.
+    </p>
 
-<div class="hero-card">
-<h3>📚 Everything You Need</h3>
-<p>
-Quizzes, Formula Sheets aur Revision Resources
-ek hi jagah.
-</p>
-</div>
+    <a href="#" class="btn">
+        🚀 Start Learning
+    </a>
+
+    <div class="hero-card">
+        <h3>🎓 Learn Smarter</h3>
+        <p>
+            Daily learning ko simple aur effective banao.
+        </p>
+    </div>
 
 </section>
 
+<h2 class="section-title">Features</h2>
+
+<div class="features">
+
+    <div class="feature-card">
+        <h3>📝 Quizzes</h3>
+        <p>Practice aur concept mastery ke liye quizzes.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>📄 Formula Sheets</h3>
+        <p>Important formulas ek hi jagah.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>🎯 Revision</h3>
+        <p>Quick revision resources for exams.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>🧰 Study Tools</h3>
+        <p>Useful tools for smart learning.</p>
+    </div>
+
+</div>
+
+<h2 class="section-title">Class 11 Subjects</h2>
+
+<div class="subjects">
+
+    <div class="subject">⚛️ Physics</div>
+    <div class="subject">🧪 Chemistry</div>
+    <div class="subject">🌿 Biology</div>
+    <div class="subject">➗ Mathematics</div>
+    <div class="subject">📖 English</div>
+    <div class="subject">➕ More</div>
+
+</div>
+
+<div class="motivation">
+    <h2>🚀 Consistency Beats Talent</h2>
+    <p>
+        Roz thoda padhoge to manzil zaroor milegi.
+    </p>
+</div>
+
+<footer>
+    📚 PadhManzil • Padhai Se Manzil Tak
+</footer>
+
 </body>
-</html>
+  </html>
