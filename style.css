@@ -195,3 +195,23 @@ text-align:center;
 padding:30px;
 color:#64748b;
   }
+.banner{
+margin:20px;
+padding:40px 25px;
+border-radius:30px;
+background:linear-gradient(135deg,#fffdf7,#e8fffb);
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.banner h2{
+font-size:2rem;
+margin-bottom:15px;
+color:#14b8a6;
+}
+
+.banner p{
+font-size:1.1rem;
+line-height:1.8;
+color:#475569;
+  }
