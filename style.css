@@ -6,19 +6,20 @@ font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:#f7fbfc;
-color:#1e293b;
+background:#f5fbfb;
+color:#0f172a;
 overflow-x:hidden;
 }
 
-/* Splash Screen */
+/* Splash */
+
 #splash{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100vh;
-background:linear-gradient(135deg,#14b8a6,#0ea5e9);
+background:linear-gradient(135deg,#14b8a6,#38bdf8);
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -29,33 +30,16 @@ animation:fadeOut 3s forwards;
 }
 
 #splash h1{
-font-size:3.2rem;
-font-weight:700;
-animation:zoomIn 1.2s ease;
+font-size:3rem;
+margin-bottom:10px;
 }
 
 #splash p{
-margin-top:15px;
 font-size:1rem;
-text-align:center;
-padding:0 20px;
-}
-
-@keyframes zoomIn{
-0%{
-opacity:0;
-transform:scale(.6);
-}
-100%{
-opacity:1;
-transform:scale(1);
-}
 }
 
 @keyframes fadeOut{
-0%,80%{
-opacity:1;
-}
+0%,80%{opacity:1;}
 100%{
 opacity:0;
 visibility:hidden;
@@ -63,40 +47,57 @@ visibility:hidden;
 }
 
 /* Navbar */
+
 nav{
+background:white;
+padding:18px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 4px 20px rgba(0,0,0,.05);
 position:sticky;
 top:0;
-background:#fff;
-padding:16px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 3px 15px rgba(0,0,0,.05);
 z-index:100;
 }
 
 .logo{
-font-size:24px;
+font-size:1.5rem;
 font-weight:700;
 color:#14b8a6;
 }
 
 /* Hero */
+
 .hero{
-padding:60px 20px;
+padding:40px 20px;
 text-align:center;
 }
 
+.tag{
+display:inline-block;
+background:#dff7f3;
+color:#14b8a6;
+padding:8px 16px;
+border-radius:999px;
+font-weight:600;
+margin-bottom:20px;
+}
+
 .hero h1{
-font-size:2.7rem;
-line-height:1.1;
-margin-bottom:15px;
+font-size:3.2rem;
+line-height:1;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#14b8a6;
 }
 
 .hero p{
 font-size:1rem;
-color:#64748b;
 line-height:1.7;
+color:#64748b;
 max-width:500px;
 margin:auto;
 }
@@ -104,50 +105,50 @@ margin:auto;
 .btn{
 display:inline-block;
 margin-top:25px;
-padding:14px 28px;
+padding:15px 28px;
 background:#14b8a6;
 color:white;
 text-decoration:none;
-border-radius:14px;
-font-weight:600;
-box-shadow:0 8px 20px rgba(20,184,166,.25);
+border-radius:16px;
+font-weight:700;
+box-shadow:0 10px 25px rgba(20,184,166,.25);
 }
 
-/* Hero Card */
 .hero-card{
-margin:35px 20px;
+margin-top:35px;
 background:white;
 padding:25px;
-border-radius:24px;
-box-shadow:0 10px 25px rgba(0,0,0,.06);
-text-align:center;
+border-radius:28px;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
-/* Section */
+/* Sections */
+
 .section-title{
 text-align:center;
 font-size:2rem;
-margin:30px 0;
+margin:45px 0 25px;
 }
 
 /* Features */
+
 .features{
-padding:20px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:15px;
+gap:16px;
+padding:20px;
 }
 
 .feature-card{
 background:white;
-padding:20px;
-border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,.06);
+padding:22px;
+border-radius:24px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
 transition:.3s;
 }
 
 .feature-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .feature-card h3{
@@ -155,39 +156,42 @@ margin-bottom:10px;
 }
 
 /* Subjects */
+
 .subjects{
-padding:20px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:15px;
+gap:16px;
+padding:20px;
 }
 
 .subject{
 background:white;
-padding:18px;
-border-radius:18px;
+padding:20px;
+border-radius:22px;
 text-align:center;
-font-weight:600;
-box-shadow:0 8px 20px rgba(0,0,0,.06);
+font-weight:700;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
 }
 
 /* Motivation */
+
 .motivation{
 margin:25px;
 padding:35px 25px;
-background:linear-gradient(135deg,#14b8a6,#0ea5e9);
+border-radius:30px;
+background:linear-gradient(135deg,#14b8a6,#38bdf8);
 color:white;
-border-radius:25px;
 text-align:center;
 }
 
 .motivation h2{
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 /* Footer */
+
 footer{
 text-align:center;
-padding:25px;
+padding:30px;
 color:#64748b;
   }
